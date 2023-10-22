@@ -7,8 +7,10 @@ let btns = ["yellow","red","green","blue"];
 
 let para = document.querySelector(".para");
 let para2 = document.querySelector(".para2");
+let butt = document.querySelector(".butt");
 
-document.addEventListener("click", function(){
+
+butt.addEventListener("click", function(){
     if(strated == false){
         strated = true;
         levelup();
@@ -53,12 +55,14 @@ function checkans(idx){
         wrong();
         crscr = level-1;
         if(crscr > prevscr){
-            para.innerText = `Game Over!! Your score was ${level-1}, Click anywhere to Restart`;
+            para.innerText = `Game Over!! Your score was ${level-1}`;
             para2.innerText = `Highest Score : ${crscr}`;
             prevscr = crscr;
+            butt.innerText = "Restart";
         }else {
-            para.innerText = `Game Over!! Your score was ${level-1}, Click anywhere to Restart`;
+            para.innerText = `Game Over!! Your score was ${level-1}`;
             para2.innerText = `Highest Score : ${prevscr}`;
+            butt.innerText = "Restart";
         }
         reset();
     }

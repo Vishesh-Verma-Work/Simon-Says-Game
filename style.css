@@ -55,6 +55,7 @@ body {
 .heading {
     width: 100%;
     /* background-color: aquamarine; */
+    margin-top: 8rem;
     font-size: 4rem;
 }
 
@@ -95,4 +96,13 @@ body {
 
 .para2 {
     font-size: 30px;
+}
+
+.butt {
+    width: 210px;
+    padding: 1rem 3rem;
+    margin-bottom: 10rem;
+    border-radius: 10%;
+    background-color: black;
+    color: white;
 }

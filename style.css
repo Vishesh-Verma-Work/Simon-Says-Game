@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    text-align: center;
+    background-color: rgba(17, 14, 163, 0.3);
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.box {
+    border-radius: 20%;
+    margin: 2rem;
+    height: 200px;
+    width:200px;
+    border:  4px solid black;
+}
+
+.box1 {
+    background-color: yellow;
+}
+
+.box2 {
+    background-color: red;
+}
+
+.box3 {
+    background-color: green;
+}
+
+.box4 {
+    background-color: blue;
+}
+
+.game {
+    /* background-color:rgb(29, 107, 175); */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+    /* margin-top: 5rem; */
+}
+
+
+.heading {
+    width: 100%;
+    /* background-color: aquamarine; */
+    font-size: 4rem;
+}
+
+
+.para {
+    margin: 1.5rem auto;
+    font-size: 40px
+}
+
+@media (max-width : 740px) {
+    .box {
+        height: 100px;
+        width: 100px;
+        margin: 1.2rem;
+    }
+
+    .para {
+        margin: .8rem auto;
+        font-size: 20px
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+}
+
+.flashclass {
+    background-color: white;
+}
+
+.flashclassbyuser{
+    background-color: rgb(36, 158, 36);
+} 
+
+.wronge {
+    background-color: red;
+}

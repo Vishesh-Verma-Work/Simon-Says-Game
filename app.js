@@ -6,6 +6,7 @@ let level = 0;
 let btns = ["yellow","red","green","blue"];
 
 let para = document.querySelector(".para");
+let para2 = document.querySelector(".para2");
 
 document.addEventListener("keypress", function(){
     if(strated == false){
@@ -20,7 +21,7 @@ function levelup(){
     userseq = [];
     level++;
     para.innerText = `Level : ${level}`;
-    let randomidx = Math.floor(Math.random()*3);
+    let randomidx = Math.floor(Math.random()*4);
     let randomclr = btns[randomidx];
     let randombtn = document.querySelector(`.${randomclr}`)
     gameseq.push(randomclr);
@@ -41,6 +42,8 @@ function flashbyuser(btn){
     },250)
 }
 
+let prevscr = 0;
+let crscr = 0;
 function checkans(idx){
     if(userseq[idx] == gameseq[idx]){
         if(userseq.length == gameseq.length){
@@ -48,7 +51,15 @@ function checkans(idx){
         }
     }else {
         wrong();
-        para.innerText = `Game Over!! Your score was ${level}`;
+        crscr = level-1;
+        if(crscr > prevscr){
+            para.innerText = `Game Over!! Your score was ${level-1}, Press key to start`;
+            para2.innerText = `Highest Score : ${crscr}`;
+            prevscr = crscr;
+        }else {
+            para.innerText = `Game Over!! Your score was ${level-1}, Press key to start`;
+            para2.innerText = `Highest Score : ${prevscr}`;
+        }
         reset();
     }
 }

@@ -8,7 +8,7 @@ let btns = ["yellow","red","green","blue"];
 let para = document.querySelector(".para");
 let para2 = document.querySelector(".para2");
 
-document.addEventListener("keypress", function(){
+document.addEventListener("click", function(){
     if(strated == false){
         strated = true;
         levelup();
@@ -53,11 +53,11 @@ function checkans(idx){
         wrong();
         crscr = level-1;
         if(crscr > prevscr){
-            para.innerText = `Game Over!! Your score was ${level-1}, Press key to start`;
+            para.innerText = `Game Over!! Your score was ${level-1}, Click anywhere to Restart`;
             para2.innerText = `Highest Score : ${crscr}`;
             prevscr = crscr;
         }else {
-            para.innerText = `Game Over!! Your score was ${level-1}, Press key to start`;
+            para.innerText = `Game Over!! Your score was ${level-1}, Click anywhere to Restart`;
             para2.innerText = `Highest Score : ${prevscr}`;
         }
         reset();
